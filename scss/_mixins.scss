@@ -1,0 +1,40 @@
+@mixin flex-items(){
+    display: flex;
+    align-items: center;
+}
+
+
+@mixin for-desktop() {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-large-desktop() {
+    @media screen and (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin for-large-tablet() {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin for-tablet() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-large-mobile() {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+@mixin for-mobile() {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}

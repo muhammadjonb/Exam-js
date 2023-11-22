@@ -1,0 +1,171 @@
+.secrion_first{
+    width: 100vw;
+    margin: 0 auto;
+    padding-top: 85px;
+}
+.hero{
+    @include flex-items;
+    justify-content: center;
+    height: 100%;
+    &_text{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 820px;
+        width: 100%;
+        height: 681px;
+        &_title{
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px;
+            gap: 20px;
+            span{
+                padding: 4px 12px;
+                border-radius: 32px;
+                background-color: #a7a7a74d;
+                font-size: 14px;
+                line-height: 21px;
+                color: $h-color;
+            }
+            h1{
+                font-size: 56px;
+                line-height: 68px;
+                font-weight: 500;
+                color: $h-color;
+            }
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                color: $p-color;
+                max-width: 500px;
+            }
+            label{
+                width: 100%;
+                @include flex-items;
+                justify-content: space-between;
+                gap: 8px;
+                .input{
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10px;
+                    border: 1px solid #E7E8E3;
+                    background-color: $white;
+                    border-radius: 4px;
+                    transition: 0.3s;
+                    height: 40px;
+                    flex-grow: 1;
+                    &:hover{
+                        box-shadow: 0 0 3px 2px #c7c7c73e;
+                    }
+                    ion-icon{
+                        font-size: 20px;
+                        color: $h-color;
+                    }
+                    input{
+                        font-size: 18px;    
+                        flex-grow: 1;
+                        padding: 0 10px;
+                        border: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        .left_top{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .right_bottom{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }    
+}
+.hero_icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 64px 0;
+    p{
+        font-size: 18px;
+        line-height: 27px;
+        color: $h-color;
+        max-width: 240px;
+    }
+    &_logo{
+        @include flex-items;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 28px;
+        img{
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1240px){
+    .hero{
+        flex-direction: column;
+        &_text{
+            max-width: 720px;
+        }
+        &_img{
+            max-width: 720px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+@include for-large-tablet(){
+    .hero_icons{
+        flex-direction: column;
+        gap: 40px;
+        p{
+            text-align: center;
+        }
+    }
+}
+@include for-large-mobile(){
+    .hero{
+        &_text{
+            height: auto;
+            padding: 50px 0;
+            .right_bottom{
+                display: none;
+            }
+            .left_top{
+                display: none;
+            }
+            &_title{
+                align-items: center;
+                text-align: center;
+                h1{
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+@include for-mobile(){
+    .hero{
+        &_text{
+            &_title{
+                h1{
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+                label{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

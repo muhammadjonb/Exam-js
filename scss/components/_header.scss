@@ -1,0 +1,190 @@
+header{
+    background-color: $white;
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.week{
+    background-color: #939878;
+    transition: 0.2s;
+    height: 40px;
+    .top_bg{
+        position: relative;
+        display: flex;
+        padding: 10px 0;
+        align-items: center;
+        justify-content: center;
+        p{
+            position: absolute;
+            left: auto;
+            top: 7px;
+            transition: 0.2s;
+            font-size: 16px;
+            line-height: 21px;
+            color: $white;
+        }
+        ion-icon{
+            position: absolute;
+            transition: 0.2s;
+            font-size: 28px;
+            color: $white;
+            top: 4px;
+            right: 20px;
+        }
+    }
+}
+// 
+.navbar-shrink{
+    .week{
+        height: 0;
+        p{
+            top: -40px;
+        }
+        ion-icon{
+            // display: none;
+            top: -40px;
+        }
+    }
+}
+.navbar{
+    @include flex-items;
+    justify-content: space-between;
+    height: 72px;
+    gap: 40px;
+    & > a{
+        & > img:nth-child(1){
+            display: none;
+        }
+    }
+    &_items{
+        @include flex-items;
+        gap: 32px;
+        .btn{
+            height: 40px;
+            .card_svg{
+                fill: $white;
+                transition: 0.3s;
+            }
+            &:hover{
+                .card_svg{
+                    fill: $h-color;
+                }
+            }
+        }
+    }
+    &_link{
+        @include flex-items;
+        font-size: 16px;
+        line-height: 24px;
+        color: $h-color;
+        transition: 0.2s;
+        gap: 8px;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+    .burger_menu{
+        display: none;
+    }
+}
+
+@include for-large-tablet(){
+    .navbar{
+        &_items{
+            position: absolute;
+            background-color: #939878;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px;
+            height: 90vh;
+            width: 60vw;
+            top: 100%;
+            right: 0;
+            transform: translate(100%);
+            transition: all 0.5s ease-in-out;
+        }
+        &_link{
+            font-size: 18px;
+        }
+        .burger_menu{
+            position: relative;
+            width: 28px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: all 0.5s ease-in-out;
+            span{
+                width: 100%;
+                height: 3px;
+                border-radius: 3px;
+                background-color: #939878;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+    .open_menu{
+        .navbar{
+            &_items{
+                transform: translate(0);
+            }
+            .burger_menu{
+                transform: rotate(-180deg);
+                &_top{
+                    position: absolute;
+                    transform: rotate(135deg);
+                }
+                &_center{
+                    position: absolute;
+                    transform: rotate(-135deg);
+                }
+                &_bottom{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@include for-large-mobile(){
+    .navbar{
+        &_items{
+            width: 100vw;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+}
+
+
+
+.back_top{
+    width: 0;
+    height: 0;
+    transition: 0.3s;
+    ion-icon{
+        font-size: 0;
+    }
+}
+.navbar-shrink{
+    .back_top{
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: #939878;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 99;
+        ion-icon{
+            font-size: 24px;
+            color: $h-color;
+        }
+    }
+}

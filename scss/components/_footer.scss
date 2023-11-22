@@ -1,0 +1,117 @@
+.footer{
+    padding: 64px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 48px 32px;
+    &_logo{
+        width: 170px;
+        a{
+            & > img:nth-child(1){
+                display: none;
+            }
+        }
+    }
+    &_items{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 170px;
+        gap: 16px;
+        h3{
+            font-size: 16px;
+            line-height: 24px;
+            color: #2A2C1F;
+            font-weight: 500;
+        }
+        p{
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 21px;
+            color: #2A2C1F;
+        }
+    }
+    &_subscribe{
+        max-width: 384px;
+        width: 100%;
+        &_p{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        label{
+            width: 100%;
+            @include flex-items;
+            justify-content: space-between;
+            gap: 8px;
+            input{
+                flex-grow: 1;
+                height: 40px;
+                padding: 0 10px;
+                border-radius: 4px;
+                background-color: $white;
+                border: 1px solid #E7E8E3;
+                transition: 0.3s;
+                &:hover{
+                    box-shadow: 0 0 3px 2px #c7c7c73e;
+                }
+            }
+        }
+        &-span{
+            @include flex-items;
+            gap: 14px;
+            span{
+                font-size: 12px;
+                color: #65665C;
+                line-height: 18px;
+            }
+        }
+    }
+}
+.footer_top{
+    padding: 24px 0;
+    background-color: #F5F5F2;
+    &_last{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            font-size: 14px;
+            line-height: 21px;
+            color: $p-color;
+        }
+    }
+    &_icon{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        ion-icon{
+            font-size: 24px;
+            color: $h-color;
+            transition: 0.3s;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+@include for-large-tablet(){
+    .footer{
+        justify-content: space-around;
+    }
+}
+@include for-mobile(){
+    .footer{
+        &_items{
+            text-align: center;
+            align-items: center;
+        }
+    }
+    .footer_top{
+        &_last{
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+}

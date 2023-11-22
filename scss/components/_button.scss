@@ -1,0 +1,19 @@
+.btn{
+    padding: 7px 20px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: $btn-color;
+    display: flex;
+    align-items: flex-start;
+    height: 40px;
+    color: $white;
+    gap: 8px;
+    &:hover{
+        background-color: transparent;
+        border-color: #c0c0c0;
+        color: $h-color;
+        box-shadow: 0 0 3px 2px #c7c7c73e;
+    }
+}
