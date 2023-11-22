@@ -98,9 +98,11 @@
     }
 }
 @include for-large-tablet(){
-    .navbar{
-        &_items{
-            background-color: #293329;
+    .dark{
+        .navbar{
+            &_items{
+                background-color: #293329;
+            }
         }
     }
 }

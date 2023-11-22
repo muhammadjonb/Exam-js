@@ -1351,7 +1351,7 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  .navbar_items {
+  .dark .navbar_items {
     background-color: #293329;
   }
 }/*# sourceMappingURL=style.css.map */
