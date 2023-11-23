@@ -1,0 +1,330 @@
+@media (max-width: 1240px){
+    .hero{
+        flex-direction: column;
+        &_text{
+            max-width: 720px;
+        }
+        &_img{
+            max-width: 720px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// @include for-desktop(){
+
+// }
+// @include for-large-desktop(){
+
+// }
+@include for-large-tablet(){
+    .navbar{
+        &_items{
+            position: absolute;
+            background-color: #939878;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px;
+            height: 90vh;
+            width: 60vw;
+            top: 100%;
+            right: 0;
+            transform: translate(100%);
+            transition: all 0.5s ease-in-out;
+        }
+        &_link{
+            font-size: 18px;
+        }
+        .burger_menu{
+            position: relative;
+            width: 28px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: all 0.5s ease-in-out;
+            span{
+                width: 100%;
+                height: 3px;
+                border-radius: 3px;
+                background-color: #939878;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+    .open_menu{
+        .navbar{
+            &_items{
+                transform: translate(0);
+            }
+            .burger_menu{
+                transform: rotate(-180deg);
+                &_top{
+                    position: absolute;
+                    transform: rotate(135deg);
+                }
+                &_center{
+                    position: absolute;
+                    transform: rotate(-135deg);
+                }
+                &_bottom{
+                    display: none;
+                }
+            }
+        }
+    }
+    .hero_icons{
+        flex-direction: column;
+        gap: 40px;
+        p{
+            text-align: center;
+        }
+    }
+    .house{
+        flex-direction: column;
+        &_text{
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .process{
+        flex-direction: column;
+        &_text{
+            align-items: center;
+            text-align: center;
+            &_card{
+                align-items: center;
+            }
+        }
+        &_img{
+            order: 2;
+        }
+    }
+}
+@include for-tablet(){
+    .favorite{
+        h2{
+            font-size: 40px;
+        }
+    }
+    .location{
+        h2{
+            font-size: 40px;
+            line-height: 48px;
+            text-align: center;
+        }
+    }
+    .section_six{
+        .our{
+            width: 550px;
+            bottom: -15%;
+            h2{
+                font-size: 40px;
+                line-height: 48px;
+                text-align: center;
+            }
+        }
+    }
+    .say{
+        align-items: center;
+        h2{
+            font-size: 40px;
+            line-height: 48px;
+            text-align: center;
+        }
+    }
+    .latest{
+        align-items: center;
+        h2{
+            font-size: 40px;
+            line-height: 48px;
+            text-align: center;
+        }
+        &_description{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+        }
+    }
+}
+@include for-large-mobile(){
+    .section_five{
+        .left_top{
+            display: none;
+        }
+        .right_bottom{
+            display: none;
+        }
+    }
+    .navbar{
+        &_items{
+            width: 100vw;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+    .hero{
+        &_text{
+            height: auto;
+            padding: 50px 0;
+            .right_bottom{
+                display: none;
+            }
+            .left_top{
+                display: none;
+            }
+            &_title{
+                align-items: center;
+                text-align: center;
+                h1{
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+    .works{
+        h2{
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+    .house{
+        h2{
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+    .process{
+        h2{
+            font-size: 36px;
+            line-height: 40px;
+        }
+        &_text{
+            &_cards{
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+            }
+        }
+    }
+    .latest{
+        &_description{
+            p{
+                max-width: 500px;
+            }
+        }
+    }
+    .favorite {
+        h2{
+            font-size: 32px;
+        }
+    }
+    .location{
+        h2{
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    .section_six{
+        .our{
+            width: 440px;
+            h2{
+                font-size: 32px;
+                line-height: 40px;
+            }
+        }
+    }
+    .say{
+        h2{
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    .latest{
+        h2{
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+}
+@include for-mobile(){
+    .hero{
+        &_text{
+            &_title{
+                h1{
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+                label{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    .works{
+        h2{
+            font-size: 28px;
+        }
+    }
+    .house{
+        h2{
+            font-size: 28px;
+            line-height: 36px;
+        }
+        &_text{
+            &_btns{
+                flex-direction: column;
+            }
+        }
+    }
+    .process{
+        h2{
+            font-size: 28px;
+            line-height: 36px;
+        }
+        &_text{
+            &_btns{
+                flex-direction: column;
+            }
+        }
+    }
+    .favorite {
+        h2{
+            font-size: 28px;
+            line-height: 32px;
+            text-align: center;
+        }
+    }
+    .location {
+        h2{
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+    .section_six{
+        .our{
+            width: 340px;
+            h2{
+                font-size: 28px;
+                line-height: 32px;
+            }
+        }
+    }
+    .say {
+        h2{
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+    .latest {
+        h2{
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+}
