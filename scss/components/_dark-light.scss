@@ -106,3 +106,14 @@
         }
     }
 }
+@include for-mobile(){
+    .dark{
+        .footer{
+            &_items{
+                h3{
+                    background-color: $h-color;
+                }
+            }
+        }
+    }
+}
